@@ -3,7 +3,7 @@ CP 321 – Data Visualization Assignment 7
 
 **Published dashboard:** https://cp321-a7-w25-adnan-awad-fifa-world-cup.onrender.com
 
-Note: Please forgive the time it takes for the link to load. Render's free plan sees free instances spin down after periods of inactivity. This can increase the loading time by minutes.
+Note: Please forgive the time it takes for the link to load. Render's free plan sees free instances spin down after periods of inactivity. This can increase the loading time by minutes. If the Render page does not run, or is simply impractical to use, you may run the code locally on your machine.
 
 The following is excerpted from the assignment posting in the course with slight alterations.
 
