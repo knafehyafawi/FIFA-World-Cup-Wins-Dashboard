@@ -1,11 +1,9 @@
-import numpy as np
-import pandas as pd
 import dash
+import dash_bootstrap_components as dbc
+import pandas as pd
+import plotly.express as px
 from dash import dcc, html
 from dash.dependencies import Input, Output
-import plotly.express as px
-import dash_bootstrap_components as dbc
-import gunicorn
 
 # Create the dataset for FIFA World Cup finals
 data = {
