@@ -1,44 +1,51 @@
-CP 321 – Data Visualization Assignment 7
-=
+# FIFA World Cup Dashboard
+## Adnan Awad
 
-**Published dashboard:** https://cp321-a7-w25-adnan-awad-fifa-world-cup.onrender.com
+------
 
-Note: Please forgive the time it takes for the link to load. Render's free plan sees free instances spin down after periods of inactivity. This can increase the loading time by minutes. If the Render page does not run, or is simply impractical to use, you may run the code locally on your machine.
-
-The following is excerpted from the assignment posting in the course with slight alterations.
+**Link:** [Vercel URL here once deployed]
 
 ---
-CP321 Data Visualization
-=
-Assignment 7
--
 
-Check and follow the submission instructions at the end of this document.
-As stated in the syllabus, late submissions are not accepted.
+### Description
+An interactive dashboard visualizing FIFA World Cup finals history (1930–2022), built with Dash and Plotly. A choropleth map shows total World Cup wins by country, and users can hover any nation to see its exact win count or look up the winner and runner-up for any given tournament year.
 
-**Tools/Software Requirements**
-- Use Numpy, Pandas, Dash and Plotly libraries to complete this assignment.
-- Your solution should include a **Choropleth maps**.
-- This assignment may require some concepts that are not covered in the class. Students are expected to research those topics on their own. Self-learning will be a goal for all the assignments and the project in this course.
-- All the tasks must be completed programmatically.
+2026 World Cup pending. We pray Morocco wins.
 
-All charts and visualizations created should be easily comprehensible and must incorporate all necessary components, such as labels, legends, colour coding, and a title.
+Data compiled from Wikipedia's [List of FIFA World Cup finals](https://en.wikipedia.org/wiki/List_of_FIFA_World_Cup_finals).
 
-Construct a concise dashboard to display the FIFA Soccer World Cup winners and runner-ups (https://en.wikipedia.org/wiki/List_of_FIFA_World_Cup_finals). The dashboard should utilize Choropleth map to visualize the data.
-- Step 1: Create a dataset for your dashboard. [5]
-- Step 2: Enable user interaction with the dashboard, allowing users to:
-  1. View all countries that have ever won a World Cup. [5]
-  2. Select a country and view the number of times it has won the World Cup. [5]
-  3. Select a year when a World Cup was organized and view the winner and the runner-up. [5]
-- Step 3: Publish your code on a server. Include a link to your published dashboard as a comment at the top of your code. Additionally, include the password if you have password-protected your website. [5]
+### Features
+- **Choropleth map** of total wins by country, color-scaled so heavier winners stand out at a glance, with exact counts on hover.
+- **Winning countries list** — every nation that has ever won the tournament.
+- **Yearly finals lookup** — select any World Cup year to see that final's winner and runner-up.
 
-_Render (https://render.com) is one option that you may use, and it offers a free plan for students. https://www.youtube.com/watch?v=H16dZMYmvqo_
+### Design Decisions
+- **West Germany / Germany unified:** Pre-1990 West Germany titles are counted under Germany, so the map reflects a single continuous nation rather than splitting historical wins.
+- **Hover over color-reading:** Because exact values are hard to read off a color gradient, hovering a country shows its precise win count (`Country (ISO): Wins`) rather than relying on the scale alone.
+- **ISO country mapping:** Country names are mapped to ISO-3 codes so Plotly's choropleth can locate them geographically.
 
-Note: West Germany and Germany should be considered the same country for the purpose of this assignment.
+### Project Structure
+- `app.py` — The Dash application: data setup, choropleth, layout, and interaction callbacks.
+- `requirements.txt` — Python dependencies.
 
-**Submission Details.**
-1. Create a folder named: FIRSTNAME_LASTNAME.
-2. Place your code file and associated files in that folder.
-3. Compress the folder into a zip file. Please make sure that your folder is appropriately named (See step 1 above) before creating the zip file. Do not rename the zip file after creating it.
-4. Upload the zip file in the appropriate dropbox on MLS.
-5. Redownload the file you submitted and confirm if you uploaded the correct file on MLS.
+### Tech Stack
+Python, Dash, Plotly, pandas, Dash Bootstrap Components.
+
+---
+
+## Run Locally
+
+### Prerequisites
+Python 3.x installed.
+
+### Setup
+1. Navigate to the folder containing `app.py`.
+2. Install dependencies:
+
+   `pip install -r requirements.txt`
+
+3. Start the app:
+
+   `python app.py`
+
+4. Open the local address shown in the terminal (usually `http://127.0.0.1:8050/`).
