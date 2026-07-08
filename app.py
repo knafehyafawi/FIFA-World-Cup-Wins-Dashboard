@@ -61,8 +61,11 @@ fig_choropleth.update_traces(
 )
 
 # Build the Dash app with Bootstrap
-app = dash.Dash(__name__, external_stylesheets=[dbc.themes.BOOTSTRAP])
-server = app.server
+# app = dash.Dash(__name__, external_stylesheets=[dbc.themes.BOOTSTRAP])
+# server = app.server
+
+dash_app = dash.Dash(__name__, external_stylesheets=[dbc.themes.BOOTSTRAP])
+app = dash_app.server
 
 # Layout
 app.layout = dbc.Container(
