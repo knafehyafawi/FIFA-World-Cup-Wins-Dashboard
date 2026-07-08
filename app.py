@@ -68,7 +68,7 @@ dash_app = dash.Dash(__name__, external_stylesheets=[dbc.themes.BOOTSTRAP])
 app = dash_app.server
 
 # Layout
-app.layout = dbc.Container(
+dash_app.layout = dbc.Container(
     style = {"maxwidth": "960px"},
     # fluid=False,
     children=[
