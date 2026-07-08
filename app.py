@@ -120,7 +120,7 @@ app.layout = dbc.Container(
 #         return html.P(f"{selected_country} has won the World Cup {win_count} times.")
 #     return html.P("Select a country to view its win count.")
 
-@app.callback(
+@dash_app.callback(
     Output('year-finals-output', 'children'),
     Input('year-dropdown', 'value')
 )
